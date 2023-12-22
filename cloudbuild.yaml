@@ -1,12 +1,4 @@
 steps:
-  #Package Install
-  - name: "gcr.io/cloud-builders/npm:node-${_NODE_VERSION}"
-    args: ["install"]
-
-  #Unit test
-  - name: "gcr.io/cloud-builders/npm:node-${_NODE_VERSION}"
-    args: ["test"]
-
   #Build image
   - name: "gcr.io/cloud-builders/docker"
     dir: .
@@ -39,7 +31,6 @@ substitutions:
   _SERVICE_NAME: nextjs-on-cloudrun
   _IMAGE_NAME: nextjs-on-cloudrun
   _TAG: latest
-  _NODE_VERSION: 18.0.0
 
 options:
   logging: CLOUD_LOGGING_ONLY
