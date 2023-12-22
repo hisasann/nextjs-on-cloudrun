@@ -40,3 +40,6 @@ substitutions:
   _IMAGE_NAME: nextjs-on-cloudrun
   _TAG: latest
   _NODE_VERSION: 18.17.1
+
+options:
+  logging: CLOUD_LOGGING_ONLY
